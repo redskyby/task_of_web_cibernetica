@@ -1,8 +1,19 @@
+@import "../../utils/variables";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.check {
+body{
+    background-color: $color;
+    font-family: $font-family
+}
+
+.main_page {
+    background-color: $main-color;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
 }
