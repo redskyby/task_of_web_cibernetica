@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./App.module.scss";
+import "./App.media.module.scss";
 import row from "../../utils/imgs/row_button.png";
 import left_main_img from "../../utils/imgs/image15.png";
 import Auth from "../modals/Auth";
