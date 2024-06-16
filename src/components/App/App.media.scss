@@ -1,6 +1,6 @@
 @media (max-width: 1440px) {
     .main_page {
-        max-width: 1100px;
+        width: 100% ;
         .left_column {
             padding: 20px;
         }
@@ -9,18 +9,16 @@
 
 @media (max-width: 768px) {
     .main_page {
-        flex-direction: column;
-        padding: 10px;
-        .left_column,
-        .right_column {
-            flex: none;
-            width: 100%;
+        flex-direction: row;
+        .left_column{
+            max-width: 100%;
         }
     }
+
 }
 
 @media (max-width: 375px) {
     .main_page {
-        padding: 10px;
+        flex-direction: row;
     }
 }
