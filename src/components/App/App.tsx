@@ -21,22 +21,24 @@ function App() {
                         <div>
                             <p>
                                 За 18 лет деятельности было реализовано более 500 крупных, а так же, не менее 2500
-                                средних и
-                                малых проектов. Используя знания и накопленный опыт мы можем предложить{" "}
+                                средних и малых проектов. Используя знания и накопленный опыт мы можем предложить{" "}
                             </p>
                         </div>
                     </div>
                     <div className={style.button_container} onClick={(e) => toggleAuth(e)}>
-                        <button>Попробовать бесплатно<img src={row} alt="*"/></button>
+                        <button>
+                            Попробовать бесплатно
+                            <img src={row} alt="*" />
+                        </button>
                     </div>
                 </div>
             </div>
             <div className={style.right_column}>
                 <div className={style.right_column_image_container}>
-                    <img src={left_main_img} alt="*"/>
+                    <img src={left_main_img} alt="*" />
                 </div>
             </div>
-            <Auth show={showModal} hidden={setShowModal}/>
+            <Auth show={showModal} hidden={setShowModal} />
         </div>
     );
 }

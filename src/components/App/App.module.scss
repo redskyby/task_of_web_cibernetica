@@ -25,18 +25,17 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     .left_column {
-        flex : 1;
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%  ;
+        height: 100%;
         padding: 20px;
         max-height: 455px;
         max-width: 50%;
 
-        &_firt_block{
-
+        &_firt_block {
         }
         h1 {
             font-size: 24px;
@@ -66,15 +65,14 @@ body {
                 cursor: pointer;
                 padding: 12px 12px 12px 24px;
                 border-radius: 60px;
-                background-color: #244C98;
+                background-color: #244c98;
                 img {
                     margin-left: 10px;
                 }
-                &:hover{
+                &:hover {
                     background-color: #0d5ff1;
                 }
             }
-
         }
     }
 
@@ -103,7 +101,7 @@ body {
 //Media
 @media (max-width: 1440px) {
     .main_page {
-        width: 100% ;
+        width: 100%;
         .left_column {
             padding: 20px;
         }
@@ -113,7 +111,7 @@ body {
 @media (max-width: 768px) {
     .main_page {
         flex-direction: row;
-        .left_column{
+        .left_column {
             max-width: 100%;
         }
     }
@@ -124,4 +122,3 @@ body {
         flex-direction: row;
     }
 }
-
