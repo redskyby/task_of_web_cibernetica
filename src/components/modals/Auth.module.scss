@@ -8,7 +8,9 @@
     display: none;
     opacity: 0;
     transform: translateY(100%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
 .second_block {
@@ -37,7 +39,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 1;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 
     .close_button {
         align-self: flex-end;

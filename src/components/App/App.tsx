@@ -7,11 +7,10 @@ import Auth from "../modals/Auth";
 function App() {
     const [showModal, setShowModal] = useState(false);
 
-
-    const toggleAuth = (e : React.MouseEvent) =>{
-        e.preventDefault()
+    const toggleAuth = (e: React.MouseEvent) => {
+        e.preventDefault();
         setShowModal(true);
-    }
+    };
 
     return (
         <div className={style.main_page}>
@@ -25,7 +24,7 @@ function App() {
                         </p>
                     </div>
                 </div>
-                <div className={style.button_container} onClick={ (e) => toggleAuth(e)}>
+                <div className={style.button_container} onClick={(e) => toggleAuth(e)}>
                     <button>Попробовать бесплатно</button>
                     <img src={row} alt="*" />
                 </div>
@@ -35,7 +34,7 @@ function App() {
                     <img src={left_main_img} alt="*" />
                 </div>
             </div>
-            <Auth show={showModal} hidden={setShowModal}/>
+            <Auth show={showModal} hidden={setShowModal} />
         </div>
     );
 }
