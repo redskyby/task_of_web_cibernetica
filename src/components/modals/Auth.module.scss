@@ -1,0 +1,100 @@
+// Variables for colors and spacing
+$primary-color: #1a73e8;
+$secondary-color: #f0f4f8;
+$border-color: #d0d4d7;
+$text-color: #333;
+$spacing-unit: 16px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-unit;
+  background-color: #f9f9f9;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  width: 300px;
+  margin: 0 auto;
+
+  .close_button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: $spacing-unit;
+  }
+
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: $spacing-unit;
+
+    input[type="text"], input[type="password"] {
+      padding: $spacing-unit / 2;
+      margin-bottom: $spacing-unit / 2;
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      background-color: $secondary-color;
+      color: $text-color;
+    }
+
+    .checkbox_container {
+      display: flex;
+      align-items: center;
+
+      input[type="checkbox"] {
+        margin-right: 8px;
+      }
+
+      label {
+        font-size: 14px;
+        color: $text-color;
+      }
+    }
+  }
+
+  .link {
+    font-size: 14px;
+    color: $primary-color;
+    text-decoration: none;
+    margin-bottom: $spacing-unit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    padding: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  .secondary_button {
+    background-color: $secondary-color;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+
+    &:hover {
+      background-color: lighten($secondary-color, 10%);
+    }
+  }
+}

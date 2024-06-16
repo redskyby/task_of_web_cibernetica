@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import style from "./App.module.scss";
 import row from "../../utils/imgs/row_button.png";
 import left_main_img from "../../utils/imgs/image15.png";
+import Auh from "../modals/Auh";
 
 function App() {
+    const [showModal , setShowModal] = useState(false);
+
     return (
         <div className={style.main_page}>
             <div className={style.left_column}>
