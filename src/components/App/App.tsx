@@ -1,11 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import style from "./App.module.scss";
 import row from "../../utils/imgs/row_button.png";
 import left_main_img from "../../utils/imgs/image15.png";
-import Auh from "../modals/Auh";
+import Auth from "../modals/Auth";
 
 function App() {
-    const [showModal , setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+
+
+    const toggleAuth = (e : React.MouseEvent) =>{
+        e.preventDefault()
+        setShowModal(true);
+    }
 
     return (
         <div className={style.main_page}>
@@ -19,7 +25,7 @@ function App() {
                         </p>
                     </div>
                 </div>
-                <div>
+                <div className={style.button_container} onClick={ (e) => toggleAuth(e)}>
                     <button>Попробовать бесплатно</button>
                     <img src={row} alt="*" />
                 </div>
@@ -29,6 +35,7 @@ function App() {
                     <img src={left_main_img} alt="*" />
                 </div>
             </div>
+            <Auth show={showModal} hidden={setShowModal}/>
         </div>
     );
 }

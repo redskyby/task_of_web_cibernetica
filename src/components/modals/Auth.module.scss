@@ -1,100 +1,124 @@
-// Variables for colors and spacing
-$primary-color: #1a73e8;
-$secondary-color: #f0f4f8;
-$border-color: #d0d4d7;
-$text-color: #333;
-$spacing-unit: 16px;
+@import "../../utils/variables";
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: $spacing-unit;
-  background-color: #f9f9f9;
-  border: 1px solid $border-color;
-  border-radius: 8px;
-  width: 300px;
-  margin: 0 auto;
+.first_block {
+    position: relative;
+}
 
-  .close_button {
-    align-self: flex-end;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
+.module_hide {
+    display: none;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-  .header {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: $spacing-unit;
-  }
+.second_block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
 
-  .form_group {
+.module_show {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-bottom: $spacing-unit;
+    align-items: center;
+    padding: $spacing-unit;
+    background-color: #f9f9f9;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    width: 300px;
+    margin: 0 auto;
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 
-    input[type="text"], input[type="password"] {
-      padding: $spacing-unit / 2;
-      margin-bottom: $spacing-unit / 2;
-      border: 1px solid $border-color;
-      border-radius: 4px;
-      background-color: $secondary-color;
-      color: $text-color;
+    .close_button {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
     }
 
-    .checkbox_container {
-      display: flex;
-      align-items: center;
+    .header {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: $spacing-unit;
+    }
 
-      input[type="checkbox"] {
-        margin-right: 8px;
-      }
+    .form_group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: $spacing-unit;
 
-      label {
+        input[type="text"],
+        input[type="password"] {
+            padding: $spacing-unit / 2;
+            margin-bottom: $spacing-unit / 2;
+            border: 1px solid $border-color;
+            border-radius: 4px;
+            background-color: $secondary-color;
+            color: $text-color;
+        }
+
+        .checkbox_container {
+            display: flex;
+            align-items: center;
+
+            input[type="checkbox"] {
+                margin-right: 8px;
+            }
+
+            label {
+                font-size: 14px;
+                color: $text-color;
+            }
+        }
+    }
+
+    .link {
         font-size: 14px;
-        color: $text-color;
-      }
+        color: $primary-color;
+        text-decoration: none;
+        margin-bottom: $spacing-unit;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
-  }
 
-  .link {
-    font-size: 14px;
-    color: $primary-color;
-    text-decoration: none;
-    margin-bottom: $spacing-unit;
+    .button {
+        display: block;
+        width: 100%;
+        padding: $spacing-unit / 2;
+        margin-bottom: $spacing-unit / 2;
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
 
-    &:hover {
-      text-decoration: underline;
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
     }
-  }
 
-  .button {
-    display: block;
-    width: 100%;
-    padding: $spacing-unit / 2;
-    margin-bottom: $spacing-unit / 2;
-    background-color: $primary-color;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
+    .secondary_button {
+        background-color: $secondary-color;
+        color: $primary-color;
+        border: 1px solid $primary-color;
 
-    &:hover {
-      background-color: darken($primary-color, 10%);
+        &:hover {
+            background-color: lighten($secondary-color, 10%);
+        }
     }
-  }
-
-  .secondary_button {
-    background-color: $secondary-color;
-    color: $primary-color;
-    border: 1px solid $primary-color;
-
-    &:hover {
-      background-color: lighten($secondary-color, 10%);
-    }
-  }
 }
